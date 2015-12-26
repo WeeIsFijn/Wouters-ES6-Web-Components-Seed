@@ -1,0 +1,46 @@
+{
+  "name": "dynamicmenu",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "config": {
+    "dev_dir": "./temp",
+    "build_dir": "./build",
+    "source_dir": "./src"
+  },
+  "scripts": {
+    "test": "./node_modules/karma/bin/karma start",
+    "devbuild": "npm run devbuild:html && npm run devbuild:js",
+    "devbuild:html": "copyfiles -u 1 $npm_package_config_source_dir'/**/*.html' $npm_package_config_build_dir",
+    "devbuild:js": "copyfiles -u 1 $npm_package_config_source_dir'/**/*.js' $npm_package_config_build_dir && copyfiles -u 3 './node_modules/systemjs/dist/*' $npm_package_config_build_dir/vendor/systemjs && copyfiles -u 3 './node_modules/traceur/bin/*' $npm_package_config_build_dir/vendor/traceur",
+    "clean": "rimraf $npm_package_config_build_dir",
+    "watch": "watch 'npm run devbuild' $npm_package_config_source_dir",
+    "preview": "live-server --open=$npm_package_config_build_dir",
+    "prestart": "npm run clean && npm run devbuild",
+    "start": "parallelshell 'npm run preview' 'npm run watch'",
+    "poststart": "npm run clean"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "copyfiles": "^0.2.1",
+    "jasmine": "^2.4.1",
+    "karma": "^0.13.16",
+    "karma-firefox-launcher": "^0.1.7",
+    "karma-jasmine": "^0.3.6",
+    "karma-nyan-reporter": "^0.2.3",
+    "karma-opera-launcher": "^0.3.0",
+    "karma-osx-reporter": "^0.2.1",
+    "karma-phantomjs-launcher": "^0.2.2",
+    "karma-safari-launcher": "^0.1.1",
+    "karma-systemjs": "^0.10.0",
+    "live-server": "^0.9.0",
+    "parallelshell": "^2.0.0",
+    "phantomjs": "^1.9.19",
+    "phantomjs-polyfill": "0.0.1",
+    "rimraf": "^2.5.0",
+    "systemjs": "^0.19.9",
+    "traceur": "0.0.95",
+    "watch": "^0.17.1"
+  }
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dynamic Menu Test</title>
+
+  <!-- WebComponents polyfill should allways be first -->
+  <script src="../bower_components/webcomponentsjs/webcomponents.js"></script>
+</head>
+<body>
+  <hello-world></hello-world>
+
+  <script src="vendor/systemjs/system.js"></script>
+  <script type="text/javascript">
+    System.config({
+      transpiler: 'traceur',
+      baseURL: 'js',
+      map: {
+        traceur: './vendor/traceur/traceur.js'
+      }
+    });
+
+    System.import('bootstrap.js')
+    .then(function () {
+      console.log('Succesfully loaded JS app');
+    }).catch( function (err) {
+      console.log(err);
+    });
+  </script>
+</body>
+</html>
