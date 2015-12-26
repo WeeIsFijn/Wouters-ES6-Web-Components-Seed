@@ -1,7 +1,7 @@
 Wouter's ES6-Webcomponents Seed
 ====================================
 
-My personal seed for ES6 projects, using SystemJS, Traceur, Web Components (and webcomponent.js as a polyfill) and finally Karma and Jasmine as test runners :heart:.
+My personal seed for ES6 projects, using SystemJS, Traceur, Web Components (and webcomponent.js as a polyfill) and finally Karma and Jasmine as test runners.
 
 ## Installation and usage
 
