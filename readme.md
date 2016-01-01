@@ -18,7 +18,7 @@ Running all unit tests:
   `$ npm test`
 
 ## Issues
-This thing is just a vet project, thus far from production-ready. Issues that should be addressed include (but probably arent going to be limited to :sob:):
+This thing is just a pet project, thus far from production-ready. Issues that should be addressed include (but probably arent going to be limited to :sob:):
 - karma-phantomjs-launcher doesnt play nice with karma-systemjs
 - I manually copy traceur and systemjs from bower_components to a vendor directory in the build folder. There should be a better way (wiredep).
 - webcomponents.js is not loaded via SystemJS, but via a script tag in the html. Which is ugly.
