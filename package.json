@@ -22,6 +22,9 @@
   },
   "author": "",
   "license": "ISC",
+  "jshintConfig": {
+    "esnext": true
+  },
   "devDependencies": {
     "copyfiles": "^0.2.1",
     "jasmine": "^2.4.1",

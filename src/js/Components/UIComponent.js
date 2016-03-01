@@ -1,13 +1,13 @@
 export class UIComponent extends HTMLElement {
   
   // Fired when an instance of the component is created
-  createdCallback() {};
+  createdCallback() {}
   // Fired when an instance was attached to the DOM
-  attachedCallback() {};
+  attachedCallback() {}
   // Fired when an instance was detached from the DOM
-  detachedCallback() {};
+  detachedCallback() {}
   // Fired when an attribute has been changed, added or deleted
-  attributeChangedCallback(attrName, oldVal, newVal) {};
+  attributeChangedCallback(attrName, oldVal, newVal) {}
 
   extendStyle( style ) {
     for (let property in style) {
@@ -27,5 +27,5 @@ export class UIComponent extends HTMLElement {
   }
 
   static register() {
-  };
+  }
 }

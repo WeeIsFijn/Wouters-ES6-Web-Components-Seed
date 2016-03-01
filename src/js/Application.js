@@ -1,11 +1,11 @@
-import { HelloWorld } from 'Components/Components.js';
+import { GLComponent } from 'Components/Components.js';
 
 export class Application {
 
   constructor () {
-    HelloWorld.register();
+    GLComponent.register();
 
-    this.message = 'Hello, world';
+    console.log('initialized Application class');
   }
 
 }

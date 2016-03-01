@@ -1,1 +1,1 @@
-export { HelloWorld } from 'Components/HelloWorld.js';
+export { GLComponent } from 'Components/GLComponent.js';
